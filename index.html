@@ -7,6 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="./styles/style.css">
 
   <title>Frontend Mentor | Social proof section</title>
 
@@ -23,94 +24,102 @@
 </head>
 
 <body>
-  <!-- Section 1 -->
-  <div>
-    <h1>
-      10,000+ of our users love our products.
-    </h1>
-    <p>
-      We only provide great products combined with excellent customer service.
-      See what our satisfied customers are saying about our services.
-    </p>
-  </div>
-
-  <!-- Section 2 -->
-  <div>
-    <img src="images/icon-star.svg" alt="star icon image">
-    <img src="images/icon-star.svg" alt="star icon image">
-    <img src="images/icon-star.svg" alt="star icon image">
-    <img src="images/icon-star.svg" alt="star icon image">
-    <img src="images/icon-star.svg" alt="star icon image">
-    <p>
-      Rated 5 Stars in Reviews
-    </p>
-    <img src="images/icon-star.svg" alt="star icon image">
-    <img src="images/icon-star.svg" alt="star icon image">
-    <img src="images/icon-star.svg" alt="star icon image">
-    <img src="images/icon-star.svg" alt="star icon image">
-    <img src="images/icon-star.svg" alt="star icon image">
-    <p>
-      Rated 5 Stars in Report Guru
-    </p>
-    <img src="images/icon-star.svg" alt="star icon image">
-    <img src="images/icon-star.svg" alt="star icon image">
-    <img src="images/icon-star.svg" alt="star icon image">
-    <img src="images/icon-star.svg" alt="star icon image">
-    <img src="images/icon-star.svg" alt="star icon image">
-    <p>
-      Rated 5 Stars in BestTech
-    </p>
-  </div>
-
-  <!-- Section 3 -->
-  <section>
-    <section>
-      <img src="images/image-colton.jpg" alt="Colton Smith Profile Picture">
-      <h3>
-        Colton Smith
-      </h3>
-      <h3>
-        Verified Buyer
-      </h3>
-      <p>
-        "We needed the same printed design as the one we had ordered a week prior.
-        Not only did they find the original order, but we also received it in time.
-        Excellent!"
+  <main class="main">
+    <!-- Section 1 -->
+    <section class="title-card">
+      <h1 class="title-card__header">
+        10,000+ of our users love our products.
+      </h1>
+      <p class="title-card__info">
+        We only provide great products combined with excellent customer service.
+        See what our satisfied customers are saying about our services.
       </p>
     </section>
-    <section>
-      <img src="images/image-irene.jpg" alt="Irent Roberts Profile Picture">
-      <h3>
-        Irene Roberts
-      </h3>
-      <h3>
-        Verified Buyer
-      </h3>
-      <p>
-        "Customer service is always excellent and very quick turn around. Completely
-        delighted with the simplicity of the purchase and the speed of delivery."
-      </p>
-    </section>
-    <section>
-      <img src="images/image-anne.jpg" alt="Anne Wallace Profile Picture">
-      <h3>
-        Anne Wallace
-      </h3>
-      <h3>
-        Verified Buyer
-      </h3>
-      <p>
-        "Put an order with this company and can only praise them for the very high
-        standard. Will definitely use them again and recommend them to everyone!"
-      </p>
-    </section>
-  </section>
 
-  <!-- <div class="attribution">
+    <!-- Section 2 -->
+    <section class="users-rating-cards">
+      <section class="user-rating-card">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <p>
+          Rated 5 Stars in Reviews
+        </p>
+      </section>
+      <section class="user-rating-card">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <p>
+          Rated 5 Stars in Report Guru
+        </p>
+      </section>
+      <section class="user-rating-card">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <img src="images/icon-star.svg" alt="star icon image">
+        <p>
+          Rated 5 Stars in BestTech
+        </p>
+      </section>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="user-reviews">
+      <section class="user-review-card user-review-card-1">
+        <img class="user-review-card__img" src="images/image-colton.jpg" alt="Colton Smith Profile Picture">
+        <h3 class="user-review-card__name">
+          Colton Smith
+        </h3>
+        <h3 class="user-review-card__status">
+          Verified Buyer
+        </h3>
+        <p class="user-review-card__review">
+          "We needed the same printed design as the one we had ordered a week prior.
+          Not only did they find the original order, but we also received it in time.
+          Excellent!"
+        </p>
+      </section>
+      <section class="user-review-card user-review-card-2">
+        <img class="user-review-card__img" src="images/image-irene.jpg" alt="Irent Roberts Profile Picture">
+        <h3 class="user-review-card__name">
+          Irene Roberts
+        </h3>
+        <h3 class="user-review-card__status">
+          Verified Buyer
+        </h3>
+        <p class="user-review-card__review">
+          "Customer service is always excellent and very quick turn around. Completely
+          delighted with the simplicity of the purchase and the speed of delivery."
+        </p>
+      </section>
+      <section class="user-review-card user-review-card-3">
+        <img class="user-review-card__img" src="images/image-anne.jpg" alt="Anne Wallace Profile Picture">
+        <h3 class="user-review-card__name">
+          Anne Wallace
+        </h3>
+        <h3 class="user-review-card__status">
+          Verified Buyer
+        </h3>
+        <p class="user-review-card__review">
+          "Put an order with this company and can only praise them for the very high
+          standard. Will definitely use them again and recommend them to everyone!"
+        </p>
+      </section>
+    </section>
+
+    <!-- <div class="attribution">
     Challenge by
     <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your
       Name Here</a>.
   </div> -->
+  </main>
 </body>
 
 </html>
