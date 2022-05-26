@@ -51,15 +51,14 @@ body {
 @media screen and (min-width: 480px) {
   .main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* why 3 columns only */
+    grid-template-columns: 400px 500px;
     grid-auto-rows: minmax(100px, auto); /* 100px ?? */
     max-width: 960px; /* ?? */
-    margin: 0 auto;
+    margin: 60px auto;
     gap: 50px;
     grid-template-areas:
-      "title-card title-card users-rating-cards"
-      "title-card title-card users-rating-cards"
-      "user-reviews user-reviews user-reviews";
+      "title-card users-rating-cards"
+      "user-reviews user-reviews";
   }
 }
 
@@ -145,9 +144,10 @@ body {
   margin-left: -25px; */
 }
 
-/* -------------------- */
-/* child 3 grid wrapper */
-/* -------------------- */
+/* ------------------------------------------------------------ */
+/*                      3rd grid wrapper */
+/* ------------------------------------------------------------ */
+
 .user-reviews {
   display: grid;
   grid-template-columns: 1fr;
@@ -161,21 +161,102 @@ body {
     "user-review-card-3";
 }
 
+/* child 3 grid wrapper */
+.user-review-card {
+  display: grid;
+  grid-template-columns: 0.7fr 2fr;
+  grid-auto-rows: minmax(10px, auto);
+  gap: 20px;
+  max-width: 960px;
+  padding: 35px;
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 15px;
+  grid-template-areas:
+    "user-review-card__img user-review-card__name"
+    "user-review-card__img user-review-card__status"
+    "user-review-card__review user-review-card__review";
+}
+
+.user-review-card__img {
+  border-radius: 50%;
+  justify-self: start;
+  width: 60px;
+  height: 60px;
+}
+
+.user-review-card__name {
+  align-self: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.user-review-card__status {
+  align-self: center;
+  color: hsl(333, 80%, 67%);
+}
+
+.user-review-card__review {
+  font: var(--ff-primary);
+  font-size: 15px;
+  word-spacing: 0.2em;
+  /* margin-top: 20px; */
+  line-height: 1.3em;
+  color: hsl(0, 0%, 100%);
+  font-weight: var(--fw-500);
+  padding: 0 30px 0 0;
+}
+
 @media screen and (min-width: 480px) {
   .user-reviews {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 child items */
-    grid-auto-rows: minmax(100px, auto);
+    /* 3 child items */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* min value decides placement of grid items*/
+    grid-auto-rows: minmax(215px, auto);
     max-width: 960px;
-    margin: 0 auto;
-    gap: 15px;
+    margin: 30px auto;
+    gap: 35px;
+    /* padding: 10px; */
     grid-template-areas: "user-review-card-1 user-review-card-2 user-review-card-3";
+  }
+
+  .user-review-card {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .user-review-card__name {
+    font-size: 0.8em;
+  }
+
+  .user-review-card__status {
+    font-size: 0.8em;
+  }
+
+  .user-review-card__review {
+    padding: 0;
+    word-spacing: 0;
+    margin: 0;
+  }
+
+  .user-review-card-1 {
+    align-self: start;
+  }
+
+  .user-review-card-2 {
+    /* margin-top: 10px; */
+    align-self: center;
+  }
+
+  .user-review-card-3 {
+    /* margin-top: 20px; */
+    align-self: end;
   }
 }
 
-/* ------------------ */
-/*  grid area names   */
-/* ------------------ */
+/* ------------------------------------------------------ */
+/*                  grid area names                       */
+/* ------------------------------------------------------ */
 
 .title-card {
   grid-area: title-card;
@@ -193,54 +274,6 @@ body {
   grid-area: user-reviews;
   /* debugging purpose only */
   /* border: 3px dotted rgb(255, 0, 200); */
-}
-
-/* 3rd grid wrapper */
-.user-review-card {
-  display: grid;
-  grid-template-columns: 0.7fr 2fr;
-  grid-auto-rows: minmax(10px, auto);
-  gap: 1px;
-  max-width: 960px;
-  padding: 35px 35px 35px 70px;
-  background-color: hsl(300, 43%, 22%);
-  border-radius: 15px;
-  grid-template-areas:
-    "user-review-card__img user-review-card__name"
-    "user-review-card__img user-review-card__status"
-    "user-review-card__review user-review-card__review";
-}
-
-.user-review-card__img {
-  grid-area: user-review-card__img;
-  border-radius: 50%;
-  justify-self: start;
-  width: 60px;
-  height: 60px;
-}
-
-.user-review-card__name {
-  grid-area: user-review-card__name;
-  align-self: center;
-  color: hsl(0, 0%, 100%);
-}
-
-.user-review-card__status {
-  grid-area: user-review-card__status;
-  align-self: center;
-  color: hsl(333, 80%, 67%);
-}
-
-.user-review-card__review {
-  grid-area: user-review-card__review;
-  font: var(--ff-primary);
-  font-size: 15px;
-  word-spacing: 0.2em;
-  margin-top: 20px;
-  line-height: 1.3em;
-  color: hsl(0, 0%, 100%);
-  font-weight: var(--fw-500);
-  padding: 0 50px 0 0;
 }
 
 .user-review-card-1 {
@@ -288,6 +321,23 @@ body {
 
 .title-card__info {
   grid-area: title-card__info;
+}
+
+/*  */
+.user-review-card__img {
+  grid-area: user-review-card__img;
+}
+
+.user-review-card__name {
+  grid-area: user-review-card__name;
+}
+
+.user-review-card__status {
+  grid-area: user-review-card__status;
+}
+
+.user-review-card__review {
+  grid-area: user-review-card__review;
 }
 
 /*
