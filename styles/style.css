@@ -57,6 +57,41 @@
 }
 
 /* -------------------- */
+/* child 1 grid wrapper */
+/* -------------------- */
+.title-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(20px, auto); /* 100px ?? */
+  max-width: 960px; /* ?? */
+  margin: 0 auto;
+  padding: 20px 40px 0px 40px;
+  gap: 10px;
+  grid-template-areas:
+    "title-card__header"
+    "title-card__info";
+}
+
+.title-card__header {
+  /* justify-self: center; */
+  text-align: center;
+  margin: 40px 5px 20px 5px;
+  font-size: 2.2em;
+  font-weight: var(--fw-700);
+  color: hsl(300, 43%, 22%);
+}
+
+.title-card__info {
+  text-align: center;
+  color: hsl(303, 10%, 53%);
+  font-size: 1em;
+  font-weight: var(--fw-500);
+  line-height: 1.25em;
+  /* place-self: center; */
+  /* margin: 0 auto; */
+}
+
+/* -------------------- */
 /* child 2 grid wrapper */
 /* -------------------- */
 .users-rating-cards {
@@ -84,6 +119,7 @@
     "user-rating-card__review-description";
   /* border: 1px solid black; */
   border-radius: 15px;
+  padding: 10px 0;
 }
 
 .user-rating-card__rating {
@@ -137,7 +173,7 @@
 .title-card {
   grid-area: title-card;
   /* debugging purpose only */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .users-rating-cards {
@@ -238,6 +274,15 @@
 .user-rating-card-3 {
   grid-area: user-rating-card-3;
 }
+
+.title-card__header {
+  grid-area: title-card__header;
+}
+
+.title-card__info {
+  grid-area: title-card__info;
+}
+
 /*
 1. display grid to main container
 2. assign name to each of the grid elements
