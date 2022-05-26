@@ -56,7 +56,55 @@
   }
 }
 
+/* -------------------- */
+/* child 2 grid wrapper */
+/* -------------------- */
+.users-rating-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(50px, auto); /* ?? minmax , 50px ?? */
+  gap: 20px;
+  max-width: 960px; /* ?? */
+  grid-template-areas:
+    "user-rating-card-1"
+    "user-rating-card-2"
+    "user-rating-card-3";
+  margin: 20px 0;
+}
+
+.user-rating-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(20px, auto);
+  max-width: 960px; /* ?? */
+  background-color: hsl(300, 24%, 96%);
+  gap: 10px;
+  grid-template-areas:
+    "user-rating-card__rating"
+    "user-rating-card__review-description";
+  /* border: 1px solid black; */
+  border-radius: 15px;
+}
+
+.user-rating-card__rating {
+  justify-self: center;
+  margin: 10px auto 0 auto;
+}
+
+.user-rating-card__review-description {
+  justify-self: center;
+  margin: 0 auto 10px auto;
+  font: var(--ff-primary);
+  font-size: 15px;
+  font-weight: var(--fw-700);
+  color: hsl(300, 43%, 22%);
+  /* margin-top: 10px;
+  margin-left: -25px; */
+}
+
+/* -------------------- */
 /* child 3 grid wrapper */
+/* -------------------- */
 .user-reviews {
   display: grid;
   grid-template-columns: 1fr;
@@ -82,7 +130,9 @@
   }
 }
 
-/* grid area names */
+/* ------------------ */
+/*  grid area names   */
+/* ------------------ */
 
 .title-card {
   grid-area: title-card;
@@ -93,7 +143,7 @@
 .users-rating-cards {
   grid-area: users-rating-cards;
   /* debugging purpose only */
-  border: 1px solid rgb(8, 0, 255);
+  /* border: 1px solid rgb(8, 0, 255); */
 }
 
 .user-reviews {
@@ -109,7 +159,7 @@
   grid-auto-rows: minmax(10px, auto);
   gap: 1px;
   max-width: 960px;
-  padding: 35px;
+  padding: 35px 35px 35px 70px;
   background-color: hsl(300, 43%, 22%);
   border-radius: 15px;
   grid-template-areas:
@@ -141,12 +191,13 @@
 .user-review-card__review {
   grid-area: user-review-card__review;
   font: var(--ff-primary);
-  font-size: 22px;
+  font-size: 15px;
   word-spacing: 0.2em;
   margin-top: 20px;
   line-height: 1.3em;
   color: hsl(0, 0%, 100%);
   font-weight: var(--fw-500);
+  padding: 0 50px 0 0;
 }
 
 .user-review-card-1 {
@@ -164,6 +215,29 @@
   /* border: 1px solid rgb(255, 77, 0); */
 }
 
+.user-rating-card {
+  grid-area: user-rating-card;
+}
+
+.user-rating-card__rating {
+  grid-area: user-rating-card__rating;
+}
+
+.user-rating-card__review-description {
+  grid-area: user-rating-card__review-description;
+}
+
+.user-rating-card-1 {
+  grid-area: user-rating-card-1;
+}
+
+.user-rating-card-2 {
+  grid-area: user-rating-card-2;
+}
+
+.user-rating-card-3 {
+  grid-area: user-rating-card-3;
+}
 /*
 1. display grid to main container
 2. assign name to each of the grid elements
