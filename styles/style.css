@@ -86,16 +86,24 @@ body {
 
 /* Desktop 2nd design approach */
 @media screen and (min-width: 480px) {
+  body {
+    background-size: 0 0;
+  }
   .main {
     display: grid;
-    grid-template-columns: 420px 530px;
+    grid-template-columns: 420px 380px;
     grid-auto-rows: minmax(100px, auto); /* 100px ?? */
-    max-width: 1060px; /* ?? */
+    max-width: 1020px; /* ?? */
     margin: 60px auto;
+    padding-bottom: 40px;
     gap: 5px;
     grid-template-areas:
       "title-card users-rating-cards"
       "user-reviews user-reviews";
+    background-image: url("../images/bg-pattern-top-desktop.svg"),
+      url("../images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top left, right -250px bottom;
   }
 
   .title-card {
@@ -170,13 +178,17 @@ body {
   .users-rating-cards {
     grid-auto-rows: minmax(25px, auto);
     gap: 5px;
+    margin-top: 85px;
   }
 
   .user-rating-card {
     padding: 10px 20px 10px 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    max-width: 300px; /* decide container size to accomodate child elements */
+    grid-template-columns: 90px 200px; /* as per design decide column width */
     grid-template-areas: "user-rating-card__rating user-rating-card__review-description";
+    gap: 10px;
+    border-radius: 5px;
   }
 
   .user-rating-card-1 {
@@ -195,11 +207,19 @@ body {
   }
 
   .user-rating-card__rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
+    padding-left: 20px;
   }
 
   .user-rating-card__review-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
+    font-size: 0.8em;
   }
 }
 
@@ -274,7 +294,7 @@ body {
     grid-auto-rows: minmax(215px, auto);
     max-width: 960px;
     margin: 30px auto;
-    gap: 35px;
+    gap: 25px;
     /* padding: 10px; */
     grid-template-areas: "user-review-card-1 user-review-card-2 user-review-card-3";
   }
