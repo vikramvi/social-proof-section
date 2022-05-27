@@ -51,7 +51,30 @@ Users should be able to:
 - CSS "BEM" is a god given gift to front end developers with which you can change or play around without fearing to break existing working solution.
 - Able to solve few complex challenges wrt CSS by Googling and reading different approaches.
 - Breaking down big problme into as small chunk as possible, helps to solve it quickly.
+- "FF and Chrome dev tools" are your best friends, if something is not working as per your expectations; then look closely to figure out what's exactly is going wrong.
+- You can use this tool to play around with properties instead of changing in code itself, saving it and watching preview. This way you can save lots of time as well.
+
+  ![devtool usage](./screenshots/devtool-usage.png)
 
 ### Continued development
 
 - More practice, reading, study is needed wrt BEM, SEO, Accessibility, CSS
+
+### Useful resources
+
+- Google ofcourse
+- YT videos
+- https://css-tricks.com/snippets/css/complete-guide-grid/
+- https://stackoverflow.com/questions/29847009/order-of-font-and-line-height-in-a-rule-set
+- https://stackoverflow.com/questions/45536537/centering-in-css-grid
+- https://stackoverflow.com/questions/48535585/what-is-difference-between-justify-self-justify-items-and-justify-content-in-cs
+
+## Author
+
+- Frontend Mentor - [@vikramvi](https://www.frontendmentor.io/profile/vikramvi)
+
+## Acknowledgments
+
+- FM community
+- Google
+- SO community
