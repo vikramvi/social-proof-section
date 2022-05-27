@@ -28,6 +28,8 @@ Users should be able to:
 
 ### Screenshot
 
+![Plan Drawing](./screenshots/planning.png)
+
 ![Desktop Preview](./screenshots/desktop.png)
 
 ![Mobile Preview](./screenshots/mobile.png)
@@ -68,6 +70,9 @@ Users should be able to:
 - https://stackoverflow.com/questions/29847009/order-of-font-and-line-height-in-a-rule-set
 - https://stackoverflow.com/questions/45536537/centering-in-css-grid
 - https://stackoverflow.com/questions/48535585/what-is-difference-between-justify-self-justify-items-and-justify-content-in-cs
+- [CSS Grid Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9itC4TxYMzFCfveyutyPOCY)
+- [Mobile-First Responsive Build (with CSS Grid)](https://www.youtube.com/playlist?list=PL4cUxeGkcC9hH1tAjyUPZPjbj-7s200a4)
+- [Build Layouts with CSS Grid](https://www.youtube.com/playlist?list=PL4cUxeGkcC9hk02lFb6EkdXF2DYGl4Gg4)
 
 ## Author
 
