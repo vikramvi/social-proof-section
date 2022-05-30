@@ -73,6 +73,8 @@ Users should be able to:
 - [CSS Grid Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9itC4TxYMzFCfveyutyPOCY)
 - [Mobile-First Responsive Build (with CSS Grid)](https://www.youtube.com/playlist?list=PL4cUxeGkcC9hH1tAjyUPZPjbj-7s200a4)
 - [Build Layouts with CSS Grid](https://www.youtube.com/playlist?list=PL4cUxeGkcC9hk02lFb6EkdXF2DYGl4Gg4)
+- [Convert px to rem VS Code Plugin](https://marketplace.visualstudio.com/items?itemName=gwanduke.convert-px-to-rem)
+- [Are you using the right CSS units?](https://www.youtube.com/watch?v=N5wpD9Ov_To)
 
 ## Author
 
