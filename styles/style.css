@@ -204,19 +204,12 @@ body {
     border-radius: 0.3125rem;
   }
 
-  .user-rating-card-1 {
-    justify-self: start;
-    align-self: center;
-  }
-
   .user-rating-card-2 {
-    justify-self: center;
-    align-self: center;
+    transform: translateX(30px);
   }
 
   .user-rating-card-3 {
-    justify-self: end;
-    align-self: center;
+    transform: translateX(60px);
   }
 
   .user-rating-card__rating {
@@ -304,13 +297,11 @@ body {
     display: grid;
     /* 3 child items */
     grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "user-review-card-1 user-review-card-2 user-review-card-3";
+    gap: 1.5625rem;
 
-    /* min value decides placement of grid items*/
-    grid-auto-rows: minmax(13.4375rem, auto);
     max-width: 60rem;
     margin: 1.875rem auto;
-    gap: 1.5625rem;
-    grid-template-areas: "user-review-card-1 user-review-card-2 user-review-card-3";
   }
 
   .user-review-card {
@@ -335,16 +326,12 @@ body {
     margin: 0;
   }
 
-  .user-review-card-1 {
-    align-self: start;
-  }
-
   .user-review-card-2 {
-    align-self: center;
+    transform: translateY(20px);
   }
 
   .user-review-card-3 {
-    align-self: end;
+    transform: translateY(40px);
   }
 }
 
